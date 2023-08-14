@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class DataLoader implements CommandLineRunner {
     private final InventoryRepository inventoryRepository;
+
     @Override
     public void run(String... args) throws Exception {
         Inventory inventory = new Inventory();
