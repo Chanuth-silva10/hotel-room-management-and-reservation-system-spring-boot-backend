@@ -1,4 +1,4 @@
-package config;
+package com.springbootmicroservices.apigateway.config;
 
 
 import org.springframework.context.annotation.Bean;
@@ -24,4 +24,3 @@ public class SecurityConfig {
         return serverHttpSecurity.build();
     }
 }
-
