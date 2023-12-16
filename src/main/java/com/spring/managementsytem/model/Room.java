@@ -24,7 +24,7 @@ public class Room {
     private boolean isBooked = false;
     @Lob
     private Blob photo;//typically represents binary large objects, such as images
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL) // if you save or delete the Room entity, the changes will be propagated to the associated BookedRoom entities.
+    @OneToMany(mappedBy = "room", fetch = FetchType.LAZY, cascade = CascadeType.ALL) // if you save or delete the Room entity, the changes will be propagated to the associated BookedRoom entities.
     private List<BookedRoom> bookings;
 
     public Room() {
