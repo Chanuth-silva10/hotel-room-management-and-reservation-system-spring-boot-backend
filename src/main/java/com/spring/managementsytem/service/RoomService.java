@@ -1,4 +1,4 @@
 package com.spring.managementsytem.service;
 
-public class RoomServiceImpl {
+public class RoomService {
 }
