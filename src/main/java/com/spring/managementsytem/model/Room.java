@@ -41,4 +41,26 @@ public class Room {
         String bookingCode = RandomStringUtils.randomNumeric(10);
         booking.setBookingConfirmationCode(bookingCode);
     }
+
+    public void setRoomType(String roomType) {
+    }
+
+
+    public void setRoomPrice(BigDecimal roomPrice) {
+    }
+
+    public void setPhoto(Blob photoBlob) {
+    }
+
+    public BigDecimal getRoomPrice() {
+        return null;
+    }
+
+    public Long getId() {
+        return null;
+    }
+
+    public String getRoomType() {
+        return null;
+    }
 }
