@@ -11,20 +11,20 @@ import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity // providing automatic generation of getters, setters, and constructors
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 public class Room {
-    @Id // In this code snippet, @Id denotes that the field id is the primary key of a JPA entity, and @GeneratedValue(strategy = GenerationType.IDENTITY) specifies that the database will automatically generate unique values for this identifier using an identity column, typically used for auto-incrementing primary keys in relational databases.
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String roomType;
     private BigDecimal roomPrice;
     private boolean isBooked = false;
     @Lob
-    private Blob photo;//typically represents binary large objects, such as images
-    @OneToMany(mappedBy = "room", fetch = FetchType.LAZY, cascade = CascadeType.ALL) // if you save or delete the Room entity, the changes will be propagated to the associated BookedRoom entities.
+    private Blob photo;
+    @OneToMany(mappedBy="room", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<BookedRoom> bookings;
 
     public Room() {
