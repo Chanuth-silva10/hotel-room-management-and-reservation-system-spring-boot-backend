@@ -19,9 +19,9 @@ public class BookedRoom {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookingId;
     @Column(name = "check_in")
-    private LocalDate checkedInDate;
+    private LocalDate checkInDate;
     @Column(name = "check_out")
-    private LocalDate checkedOutDate;
+    private LocalDate checkOutDate;
     @Column(name = "guest_fullName")
     private String guestFullName;
     @Column(name = "guest_email")
@@ -51,6 +51,5 @@ public class BookedRoom {
         NumOfChildren = numOfChildren;
         CalculateTotalNumberOfGuest();
     }
-
 
 }
