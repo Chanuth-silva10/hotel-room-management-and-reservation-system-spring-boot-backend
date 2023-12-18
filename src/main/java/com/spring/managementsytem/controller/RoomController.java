@@ -13,14 +13,12 @@ import java.math.BigDecimal;
 import java.sql.SQLException;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/rooms")
 public class RoomController {
 
     private final IRoomService roomService;
 
-    public RoomController(IRoomService roomService) {
-        this.roomService = roomService;
-    }
 
     @PostMapping("/add/new-room")
     public ResponseEntity<RoomResponse> addNewRoom(
