@@ -22,7 +22,7 @@ This repository contains the backend implementation of a Hotel Room Management a
 ## Getting Started
 
 ### Prerequisites
-- Java 11
+- Java 17
 - Maven
 - MySQL
 
